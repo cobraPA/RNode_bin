@@ -1,6 +1,38 @@
 Version Info
 Mark Qvist git v/ 1.81
 
+====================================
+Upgrade with adafruit utilities  
+(you may have to issue twice, sometimes the port will change on entry to DFU.
+Find the initial port by looking in Arduino IDE when the T1000-E is connected.
+Adjust port and location of adafruit-nrfutil you are not on Windows.)
+
+$  ~/Documents/Arduino/hardware/Adafruit/Seeed_Adafruit_nRF52_Arduino/tools/adafruit-nrfutil/win32/adafruit-nrfutil.exe --verbose dfu serial --package RNode_Firmware.ino.zip -p COM20 -b 115200 --singlebank --touch 1200
+Upgrading target on COM20 with DFU package C:\Users\cobra\Documents\Arduino\RNode_bin\t1000e_mark\RNode_Firmware.ino.zip. Flow control is disabled, Single bank, Touch 1200
+Touched serial port COM20
+Opened serial port COM20
+Starting DFU upgrade of type 4, SoftDevice size: 0, bootloader size: 0, application size: 221108
+Sending DFU start packet
+Sending DFU init packet
+Sending firmware file
+########################################
+########################################
+########################################
+########################################
+########################################
+########################################
+########################################
+########################################
+########################################
+########################################
+################################
+Activating new firmware
+
+DFU upgrade took 13.881927251815796s
+Device programmed.
+
+=======================================================
+
 Git history:
 ---------------
 commit 0029a41fcb2ccbe0ea7e784544abc020929e5dc8 (HEAD -> nrf52_t1000e_upstream, cobra_ios/nrf52_t1000e_upstream)
