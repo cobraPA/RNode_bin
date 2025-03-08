@@ -1,0 +1,17 @@
+Version Info
+Mark Qvist git v/ 1.81
+
+Git history:
+---------------
+commit 0029a41fcb2ccbe0ea7e784544abc020929e5dc8 (HEAD -> nrf52_t1000e_upstream, cobra_ios/nrf52_t1000e_upstream)
+Author: Kevin Brosius <cobra@compuserve.com>
+Date:   Mon Mar 3 22:25:03 2025 -0500
+
+    Seeed T1000-E Initial support, basic testing in Sideband for
+    Windows is working.
+
+commit de35a9dda0b86586dfd33b14295f9c176a9a5e3c (origin/master, origin/HEAD)
+Author: Mark Qvist <mark@unsigned.io>
+Date:   Fri Jan 24 13:21:24 2025 +0100
+
+    Updated readme
