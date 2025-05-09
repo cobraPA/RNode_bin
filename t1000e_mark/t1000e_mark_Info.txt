@@ -5,7 +5,7 @@ Mark Qvist git v/ 1.81
 Upgrade with adafruit utilities  
 (you may have to issue twice, sometimes the port will change on entry to DFU.
 Find the initial port by looking in Arduino IDE when the T1000-E is connected.
-Adjust port and location of adafruit-nrfutil you are not on Windows.)
+Adjust port and location of adafruit-nrfutil if you are not on Windows.)
 
 $  ~/Documents/Arduino/hardware/Adafruit/Seeed_Adafruit_nRF52_Arduino/tools/adafruit-nrfutil/win32/adafruit-nrfutil.exe --verbose dfu serial --package RNode_Firmware.ino.zip -p COM20 -b 115200 --singlebank --touch 1200
 Upgrading target on COM20 with DFU package C:\Users\cobra\Documents\Arduino\RNode_bin\t1000e_mark\RNode_Firmware.ino.zip. Flow control is disabled, Single bank, Touch 1200
@@ -32,6 +32,23 @@ DFU upgrade took 13.881927251815796s
 Device programmed.
 
 =======================================================
+
+rnodeconf.py from this repo has support for the t1000e
+
+You will need to update the firmware hash after flashing, you can try with:
+Provision
+$ python rnodeconf.py --platform NRF52 --product 24 --model 25 --hwrev 1 --rom COM21
+Set hash
+$ python rnodeconf.py --firmware-hash f8d7dc048f9f17d0630322848b64b03983a82d16a97dce2deb33973a151108b2 COM21
+
+If the hash is still not frecognized, please let me know.  You can read the hash and set it also:
+(Copy the hash from the get hash in to the second command.  Please verify you trust the source of your
+firmware if doing this...)
+$ python rnodeconf.py --get-firmware-hash COM21
+[22:13:04] The actual firmware hash is: f8d7dc048f9f17d0630322848b64b03983a82d16a97dce2deb33973a151108b2
+python rnodeconf.py --firmware-hash f8d7dc048f9f17d0630322848b64b03983a82d16a97dce2deb33973a151108b2 COM21
+
+
 
 Git history:
 ---------------
