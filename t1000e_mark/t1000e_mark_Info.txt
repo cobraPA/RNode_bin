@@ -41,13 +41,15 @@ $ python rnodeconf.py --platform NRF52 --product 24 --model 25 --hwrev 1 --rom C
 Set hash
 $ python rnodeconf.py --firmware-hash f8d7dc048f9f17d0630322848b64b03983a82d16a97dce2deb33973a151108b2 COM21
 
-If the hash is still not frecognized, please let me know.  You can read the hash and set it also:
-(Copy the hash from the get hash in to the second command.  Please verify you trust the source of your
-firmware if doing this...)
+If the hash is still not recognized, please let me know.  You can read the hash and set it also:
+(Copy the hash from the get hash result of first command in to the second command.
+Please verify you trust the source of your firmware if doing this.)
 $ python rnodeconf.py --get-firmware-hash COM21
 [22:13:04] The actual firmware hash is: f8d7dc048f9f17d0630322848b64b03983a82d16a97dce2deb33973a151108b2
 python rnodeconf.py --firmware-hash f8d7dc048f9f17d0630322848b64b03983a82d16a97dce2deb33973a151108b2 COM21
 
+If you have not provisioned any devices before, you may need a local key:
+$ rnodeconf.py -k
 
 
 Git history:
