@@ -66,3 +66,13 @@ Author: Mark Qvist <mark@unsigned.io>
 Date:   Fri Jan 24 13:21:24 2025 +0100
 
     Updated readme
+
+Web flasher
+---------------
+The zip file is renamed and identical content is called: 
+  rnode_firmware_t1000e.zip 
+for the version matching Mark's upstream, or
+  rnode_firmware_t1000e_ios.zip
+for the version matching iOS BLE.  It is stored in:
+  RNode_bin/webflasher/beta/
+  
